@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\JobPostingController;
+
 
 
 
@@ -42,3 +44,15 @@ Route::middleware(['auth', 'admin'])
         Route::resource('users', UserController::class);
 
 });
+
+Route::middleware(['auth', 'employer'])
+    ->prefix('employer')
+    ->name('employer.')
+    ->group(function () {
+
+        Route::resource('job-postings', JobPostingController::class);
+
+});
+
+
+

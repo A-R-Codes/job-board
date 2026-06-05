@@ -52,6 +52,23 @@ $user = auth()->user();
                         <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/jobs">Job Postings</a></li>
                     @endif
 
+                     @if($user && $user->user_type === 'user')
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/dashboard">User</a></li>
+                        <!-- <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/dashboard">Dashboard</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/profile">Profile</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/jobs">Job Postings</a></li> -->
+                    @endif
+
+                     @if($user && $user->user_type === 'employer')
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/dashboard">Employer</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/employer/job-postings">Job Postings</a></li>
+                        <
+                        
+                        <!-- <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/dashboard">Dashboard</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/profile">Profile</a></li>
+                        <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="/company/jobs">Job Postings</a></li> -->
+                    @endif
+
                     <!-- Common Links -->
                     <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="#">About Us</a></li>
                     <li><a class="px-3 py-2 rounded-lg hover:bg-white hover:text-purple-700 transition" href="#">Treatments</a></li>

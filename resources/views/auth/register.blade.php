@@ -28,6 +28,10 @@
             <button class="w-full bg-green-600 text-white py-2 rounded-lg">
                 Register
             </button>
+            <a href="/login" class="text-blue-600 hover:underline">
+                Already have an account? Login
+            </a>
+
 
         </form>
 

@@ -49,6 +49,9 @@
                 >
                     Login
                 </button>
+                <a href="/register" class="text-blue-600 hover:underline">
+                    Don't have an account? Register
+                </a>
 
             </form>
 
